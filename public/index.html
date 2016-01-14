@@ -1,1 +1,43 @@
-this is index html
+
+<html ng-app="IotApp">
+
+
+<head></head>
+
+<body>
+	<div  ng-controller="IotCntrl">
+		
+     <h2> IOT Demo </h2>
+
+
+	<table border="1" style="width:100%">
+ 		 <tr>
+    			<td><button type="button" style="width:100px;height:30px;background-color:#FF4500" ng-click="click('red',status.red);">Red</button></td>
+    			<td>{{status.red}}</td> 
+  		</tr>
+  		<tr>
+    			<td><button type="button" style="width:100px;height:30px;background-color:#FFFF00" ng-click="click('yellow',status.yellow);">Yellow</button></td>
+    			<td>{{status.yellow}}</td> 
+  		</tr>
+  		<tr>
+    			<td><button type="button" style="width:100px;height:30px;background-color:#006400" ng-click="click('buzz',status.buzz);">Buzz</button></td>
+    			<td>{{status.buzz}}</td> 
+  		</tr>
+  		<tr>
+    			<td><button type="button" style="width:100px;height:30px;background-color:#00FFFF" ng-click="click('dance',status.dance);">Dance</button></td>
+    			<td>{{status.dance}}</td> 
+  		</tr>
+    </table>
+
+
+
+	<div>
+</body>
+
+
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.js"></script>
+<script src="app.js"></script>
+
+</html>

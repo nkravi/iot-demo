@@ -6,10 +6,10 @@ var cache = require('memory-cache');
 
 function getStatus(){
   return {
-    "R":cache.get("R") || "0",
-     "Y":cache.get("Y") || "0",
-     "B":cache.get("B") || "0",
-     "D":cache.get("D") || "0"
+    "red":cache.get("R") || "0",
+     "yellow":cache.get("Y") || "0",
+     "buzz":cache.get("B") || "0",
+     "dance":cache.get("D") || "0"
   }
 }
 
@@ -17,6 +17,10 @@ function getStatus(){
 router.get('/', function(req, res) {
   res.sendFile('index.html',{root: path.join(__dirname,'./../../public')});
 });
+
+router.get('/status',function(req,res){
+  res.status(200).send(getStatus());
+})
 
 router.put('/dance/:state',function(req,res){
     cache.put("D",req.params.state);
