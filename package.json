@@ -1,0 +1,37 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "app to display job profile",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.4.x",
+    "bower": "1.4.x"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "bower": "^1.4.1",
+    "express": "^4.12.4",
+    "express-jwt": "^3.1.0",
+    "express-session": "^1.11.3",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.0",
+
+    "connect-flash" : "~0.1.1",
+    "bcrypt-nodejs" : "latest",
+    "gulp": "^3.8.11",
+    "gulp-nodemon": "^2.0.3",
+    "mongoose": "^4.0.3",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-iife": "^0.1.0",
+    "jsonwebtoken": "^5.0.5"
+  }
+}
